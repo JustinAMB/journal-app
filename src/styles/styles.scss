@@ -1,0 +1,10 @@
+$red:#ff8000;
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background-color: $red;
+}
