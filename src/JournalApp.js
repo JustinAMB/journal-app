@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import AppRouter from './routers/AppRouter';
 
 const JournalApp = () => {
   return (
-    <h1>React</h1>
+    <AppRouter />
   )
 }
 
