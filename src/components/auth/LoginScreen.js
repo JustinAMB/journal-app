@@ -6,8 +6,8 @@ const LoginScreen = () => {
     <>
     <h3 className="auth__title">Login</h3>
       <form >
-        <input type="email" name="email" placeholder="email" />
-        <input type="password" name="password" placeholder="password" />
+        <input type="email" name="email" placeholder="email" className="auth__input"/>
+        <input type="password" name="password" placeholder="password" className="auth__input" />
         <button type="submit">Log in </button>
         <hr />
         <div>
