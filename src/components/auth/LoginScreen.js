@@ -2,9 +2,15 @@ import React from 'react'
 
 const LoginScreen = () => {
   return (
-    <div>
-        <h1>LoginScreen</h1>
-    </div>
+    <>
+    <form >
+      <input type="email" name="email" placeholder="email" />
+      <input type="password" name="password" placeholder="password" />
+      <button type="submit">Log in </button>
+      <hr />
+      <a href="/auth/register">Google</a>
+    </form>
+    </>
   )
 }
 
