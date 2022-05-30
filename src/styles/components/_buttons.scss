@@ -8,3 +8,11 @@
         outline: none;
     }
 }
+
+.btn-primary {
+    background-color: $primary;
+    border-radius: .15rem;
+    &:disabled {
+        background-color: lighten($color: $primary, $amount: 15);
+    }
+}
