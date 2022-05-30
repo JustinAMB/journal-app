@@ -8,9 +8,9 @@ const LoginScreen = () => {
       <form >
         <input type="email" name="email" placeholder="email" className="auth__input"/>
         <input type="password" name="password" placeholder="password" className="auth__input" />
-        <button type="submit">Log in </button>
-        <hr />
-        <div>
+        <button type="submit" className="btn btn-primary btn-block">Log in </button>
+        
+        <div className="auth__social-networks">
           <p>Login with social networks</p>
           <div className="google-btn">
             <div className="google-icon-wrapper">
@@ -21,7 +21,7 @@ const LoginScreen = () => {
             </p>
           </div>
         </div>
-        <Link to='/auth/register'>
+        <Link to='/auth/register' className="link">
           Create new account
         </Link>
       </form>
