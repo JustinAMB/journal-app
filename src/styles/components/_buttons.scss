@@ -1,0 +1,10 @@
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    padding: .5rem .75rem;
+    &:focus {
+        outline: none;
+    }
+}
