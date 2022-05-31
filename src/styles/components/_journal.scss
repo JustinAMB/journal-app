@@ -34,3 +34,9 @@
         color: darken($color: $white, $amount: 20);
     }
 }
+
+.journal__entries {
+    flex: 1 1 auto;
+    margin-top: 2rem;
+    overflow-y: scroll;
+}
