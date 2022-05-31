@@ -40,3 +40,17 @@
     margin-top: 2rem;
     overflow-y: scroll;
 }
+
+.journal__entry {
+    background-color: $white;
+    border-radius: 0.3rem;
+    color: $dark-grey;
+    display: flex;
+    margin-bottom: .6rem;
+    overflow: hidden;
+}
+
+.journal__entry-picture {
+    width: 4.5rem;
+    height: 4.5rem;
+}
