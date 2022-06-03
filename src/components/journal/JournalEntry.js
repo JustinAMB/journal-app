@@ -15,6 +15,11 @@ const JournalEntry = () => {
           <p className="journal__entry-content">Lorem ipsum dolor sit amet consectetur adipisicing </p>
 
         </div>
+        <div className="journal__entry-date-box">
+         <span>Monday</span>
+         <h4>28</h4>
+
+        </div>
     </div>
   )
 }
