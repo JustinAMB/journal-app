@@ -67,3 +67,10 @@
 .journal__entry-content {
     font-size: .6rem;
 }
+
+.journal__entry-date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
