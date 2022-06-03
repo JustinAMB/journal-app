@@ -7,7 +7,7 @@
     color: $white;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     padding-inline: 0.6rem;
     width: 28rem;
 }
@@ -73,4 +73,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: .3rem;
+}
+
+.journal__entry-date-box span {
+    font-size: .8rem;
 }
