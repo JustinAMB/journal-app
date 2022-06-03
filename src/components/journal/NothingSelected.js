@@ -2,7 +2,14 @@ import React from 'react'
 
 const NothingSelected = () => {
   return (
-    <div>NothingSelected</div>
+    <div className="nothing__main-content">
+        <p>
+            Select nothing__main
+            <br />
+            pr  create a entry!
+        </p>
+        <i className="far fa-star fa-4x mt-5"></i>
+    </div>
   )
 }
 
