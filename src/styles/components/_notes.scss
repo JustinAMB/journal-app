@@ -4,3 +4,12 @@
     justify-content: center;
     height: 100%;
 }
+
+.notes__appbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $primary;
+    color: $white;
+    padding: 0.6rem 1.2rem;
+}
