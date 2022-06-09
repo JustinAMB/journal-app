@@ -36,7 +36,7 @@ const LoginScreen = () => {
           value={password}
           onChange={handleInputChange}
           />
-        <button type="submit" className="btn btn-primary btn-block">Log in </button>
+        <button type="submit" className="btn btn-primary btn-block" onSubmit={handleLogin}>Log in </button>
         
         <div className="auth__social-networks">
           <p>Login with social networks</p>
