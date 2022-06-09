@@ -1,13 +1,38 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import { useForm } from '../../hooks/useForm';
 
 const LoginScreen = () => {
+  const [formValues,handleInputChange,reset]=useForm({
+    email:'',
+    password:''
+  });
+  const {email,password}=formValues;
+  const handleLogin=(e)=>{
+    e.preventDefault();
+
+    
+  }
   return (
     <>
     <h3 className="auth__title">Login</h3>
       <form >
-        <input type="email" name="email" placeholder="email" className="auth__input"/>
-        <input type="password" name="password" placeholder="password" className="auth__input" />
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="email" 
+          className="auth__input"
+          value={email}
+          onChange={handleInputChange}
+        />
+        <input 
+          type="password" 
+          name="password" 
+          placeholder="password" 
+          className="auth__input" 
+          value={password}
+          onChange={handleInputChange}
+          />
         <button type="submit" className="btn btn-primary btn-block">Log in </button>
         
         <div className="auth__social-networks">
