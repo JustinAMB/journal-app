@@ -42,7 +42,17 @@ const RegisterScreen = () => {
   return (
     <>
     <h3 className="auth__title">Register</h3>
-      <form  className="animate__animated animate__fadeIn animate__faster" onSubmit={ handleRegister }>
+      <form  
+      className="animate__animated animate__fadeIn animate__faster" 
+      onSubmit={ handleRegister }>
+         {
+            msgError &&
+            (
+                <div className="auth__alert-error">
+                    { msgError }
+                </div>
+            )
+        }
         <input type="text" name="name" placeholder="name" className="auth__input mb-1"   onChange={ handleInputChange } value={ name }/>
         <input type="email" name="email" placeholder="email" className="auth__input mb-1"  onChange={ handleInputChange } value={ email }/>
         
