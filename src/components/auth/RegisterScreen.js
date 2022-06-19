@@ -9,6 +9,22 @@ const RegisterScreen = () => {
     password2: '',
   });
   const {name,email,password,password2}=formValues;
+  const isFormValid = () => {
+        
+    if ( name.trim().length === 0 ) {
+        dispatch( setError('Name is required') )
+        return false;
+    } else if ( !validator.isEmail( email ) ) {
+        dispatch( setError('Email is not valid') )
+        return false;
+    } else if ( password !== password2 || password.length < 5 ) {
+        dispatch( setError('Password should be at least 6 characters and match each other') )
+        return false
+    }
+    
+    dispatch( removeError() );
+   return true;
+  }
   return (
     <>
     <h3 className="auth__title">Register</h3>
