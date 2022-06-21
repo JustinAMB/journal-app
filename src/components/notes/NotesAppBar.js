@@ -23,6 +23,13 @@ const NotesAppBar = () => {
   return (
     <div className="notes__appbar">
         <span>28 de agosto de 2000</span>
+        <input 
+                id="fileSelector"
+                type="file"
+                name="file"
+                style={{ display: 'none' }}
+                
+            />
         <div>
           <button className="btn">Picture</button>
           <button className="btn">Save</button>
