@@ -48,6 +48,7 @@ const NoteScreen = () => {
         
       </div>
       <button className = "btn btn-danger"
+      onClick = { handleDelete }
         >
         Delete </button>
     </div>
