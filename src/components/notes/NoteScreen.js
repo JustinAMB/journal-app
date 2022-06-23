@@ -7,6 +7,28 @@ const NoteScreen = () => {
   const { active:note } = useSelector( state => state.notes );
   const [ formValues, handleInputChange, reset ] = useForm( note );
   const { body, title, id } = formValues;
+  
+  const activeId = useRef(note.id);
+
+  useEffect(() => {
+
+      if (note.id !== activeId.current) {
+          reset(note);
+          activeId.current = note.id
+      }
+
+  }, [note, reset])
+
+  useEffect(() => {
+
+      dispatch(activeNote(formValues.id, {...formValues }));
+
+  }, [formValues, dispatch])
+
+
+  const handleDelete = () => {
+      dispatch(startDeleting(id));
+  }
   return (
     <div className="notes__main-content">
       <NotesAppBar/>
