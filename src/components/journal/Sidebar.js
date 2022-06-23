@@ -1,7 +1,21 @@
 import React from 'react'
 import JournalEntries from './JournalEntries'
+import { useDispatch, useSelector } from 'react-redux'
 
+import { JournalEntries } from './JournalEntries'
+import { startLogout } from '../../actions/auth';
+import { startNewNote } from '../../actions/notes';
 const Sidebar = () => {
+    const dispatch = useDispatch();
+    const { name } = useSelector( state => state.auth );
+
+    const hanleLogout = () => {
+        dispatch( startLogout() )
+    }
+
+    const handleAddNew = () => {
+        dispatch( startNewNote() );
+    }
   return (
     <aside className="journal__sidebar">
         <div className="journal__sidebar-navbar">
