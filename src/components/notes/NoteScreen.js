@@ -1,7 +1,8 @@
-import React from 'react'
+import React ,{ useEffect, useRef }from 'react'
 import  NotesAppBar from './NotesAppBar';
+import { useSelector, useDispatch } from 'react-redux';
 import { useForm } from '../../hooks/useForm';
-const { active:note } = useSelector( state => state.notes );
+import { activeNote, startDeleting } from '../../actions/notes';
 const NoteScreen = () => {
   const dispatch = useDispatch();
   const { active:note } = useSelector( state => state.notes );
