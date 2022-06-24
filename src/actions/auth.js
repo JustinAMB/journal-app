@@ -4,13 +4,17 @@ import {
     googleAuthProvider
 } from '../firebase/firebase-config';
 import Swal from 'sweetalert2';
+import { noteLogout } from './notes';
 
 export const startGoogleLogin = () => {
     return (dispatch) => {
         firebase.auth().signInWithPopup(googleAuthProvider)
-            .then(userCard => {
-                console.log(userCard);
-            })
+            .then(({ user }) => {
+                dispatch(
+                    login(user.uid, user.displayName)
+                )
+            });
+
     }
 }
 export const login = (uid, displayName) => ({
@@ -41,5 +45,13 @@ export const startRegisterWithEmailPasswordName = (email, password, name) => {
                 Swal.fire('Error', e.message, 'error');
             })
 
+    }
+}
+export const startLogout = () => {
+    return async(dispatch) => {
+        await firebase.auth().signOut();
+
+        dispatch(logout());
+        dispatch(noteLogout());
     }
 }
