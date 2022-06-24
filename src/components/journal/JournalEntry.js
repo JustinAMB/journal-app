@@ -14,14 +14,20 @@ const JournalEntry = ({ id, date, title, body, url }) => {
         );
     }
   return (
-    <div className="journal__entry pointer">
-        <div className="journal__entry-picture"
-        style={{
-           backgroundImage:'url(https://static.videezy.com/system/resources/thumbnails/000/042/456/original/Sky-night-rotation-space-background.jpg)',
-           backgroundSize: 'cover',
-        }}>
-            
-        </div>
+    <div className="journal__entry pointer"  >
+        {
+          (url)&&
+          (
+            <div className="journal__entry-picture"
+            style={{
+               backgroundImage:`url:(${url})`,
+               backgroundSize: 'cover',
+            }}>
+                
+            </div>
+          )
+        }
+       
         <div className="journal__entry-body">
           <p className="journal__entry-title">New day</p>
           <p className="journal__entry-content">Lorem ipsum dolor sit amet consectetur adipisicing </p>
